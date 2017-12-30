@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Truth Table</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <input type="text" id="in_exp" class="exp" />
+            </div>
+
+            <div class="row">
+                <div id="message" class="message">
+                    Type your expression
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="symbols" class="symbols"></div>
+            </div>
+
+            <div class="row">
+                <table class="options">
+                    <tr>
+                        <td>
+                            <b>Constants:</b>
+                        </td>
+                        <td>
+                            <b>Order:</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="constants" value="T/F" checked> T/F
+                        </td>
+                        <td>
+                            <input type="radio" name="order" value="T -> F" checked> T -> F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="constants" value="1/0"> 1/0
+                        </td>
+                        <td>
+                            <input type="radio" name="order" value="F -> T"> F -> T
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <div id="result" class="result"></div>
+            </div>
+
+        </div>
+        <script src="js/truth-table.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
