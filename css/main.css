@@ -11,7 +11,7 @@ html, body {
 .container {
     position: absolute;
     float: left;
-    min-width: 600px;
+    width: 600px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 30px;
@@ -63,7 +63,6 @@ html, body {
 
 .result table {
     margin: 10px auto;
-    cellspacing: 0;
     border-spacing:0;
     border-collapse: collapse;
 }
@@ -72,4 +71,14 @@ html, body {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #bbb;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        position: initial;
+        width: calc(100% - 30px);
+        left: 0%;
+        transform: translateX(-0%);
+        margin: 15px;
+    }
 }
