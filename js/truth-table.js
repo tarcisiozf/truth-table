@@ -106,8 +106,11 @@ const parse = (str, vars = [], offset = 0) => {
         else if ( isFunc(c) ) {
             val = c
         }
+        else if ( c === ' ' ) {
+	        continue
+        }
         else {
-            continue
+        	throw new SyntaxError(`Invalid character '${c}'`)
         }
 
         out.push(val)
