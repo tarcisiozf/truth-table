@@ -185,7 +185,7 @@ const solve = (exp, values) => {
             throw new SyntaxError(`Could not solve pair <${symbol}> <${p}>`)
         }
 
-        return not(p)
+        return not(solve(p, values))
     }
     else if ( len === 3 ) {
         const [ p, symbol, q ] = exp
