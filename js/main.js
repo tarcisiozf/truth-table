@@ -156,6 +156,7 @@ class Main {
 
 	clear() {
 		this.input.value = ''
+		this.input.focus()
 		this.clearMessage()
 	}
 }
