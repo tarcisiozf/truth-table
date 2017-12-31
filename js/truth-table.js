@@ -186,6 +186,11 @@ const solve = (exp, values) => {
     }
     else if ( len === 3 ) {
         const [ p, symbol, q ] = exp
+
+		if ( ! isFunc(symbol) ) {
+        	throw new SyntaxError(`Invalid function '${symbol}'`)
+		}
+
         const func = symbols[symbol]
 
         return func(solve(p, values), solve(q, values))
