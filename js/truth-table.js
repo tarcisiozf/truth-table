@@ -42,6 +42,8 @@ const symbols = {
     '↓': nor
 }
 
+const not_symbols = [ '¬', '~' ]
+
 const isVar = c => ( ( c >= 'A' && c <= 'Z' ) || ( c >= 'a' && c <= 'z' ) )
 
 const isFunc = c => c in symbols
@@ -150,9 +152,34 @@ const bindValues = (names, values) => {
 }
 
 const groupExpression = (exp) => {
-    const first = exp.slice(0, 3)
-    const tail = exp.slice(3)
-    const out = [ first ].concat(tail)
+
+	// seach for 'not' in expression
+	let out, group, i
+
+	for(i = 0; i < exp.length; i++) {
+		const c = exp[i]
+
+		if ( typeof c !== 'string' || ! not_symbols.includes(c) ) {
+			continue
+		}
+
+		group = [ c, exp[i + 1] ]
+		break
+	}
+
+	// 'not' group
+	if ( group ) {
+
+		const first = exp.slice(0, i)
+		const tail = exp.slice(i + 2)
+		first.push(group)
+		out = first.concat(tail)
+
+	} else { // auto group
+		const first = exp.slice(0, 3)
+		const tail = exp.slice(3)
+		out = [ first ].concat(tail)
+	}
 
     return ( out.length > 1 )
         ? groupExpression(out)
