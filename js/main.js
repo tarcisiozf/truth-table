@@ -2,6 +2,7 @@ class Main {
 	constructor() {
 		this.solveExp = this.solveExp.bind(this)
 		this.printSymbol = this.printSymbol.bind(this)
+		this.clear = this.clear.bind(this)
 
 		this.true = 'T'
 		this.false = 'F'
@@ -12,8 +13,12 @@ class Main {
 		this.input = document.getElementById('in_exp')
 
 		this.input.addEventListener('keyup', this.solveExp)
-		this.input.focus()
 
+		document
+			.getElementById('clear')
+			.addEventListener('click', this.clear)
+
+		this.input.focus()
 		this.renderButtons()
 	}
 
@@ -147,6 +152,11 @@ class Main {
 			this.true = '1'
 			this.false = '0'
 		}
+	}
+
+	clear() {
+		this.input.value = ''
+		this.clearMessage()
 	}
 }
 

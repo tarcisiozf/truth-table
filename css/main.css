@@ -32,6 +32,12 @@ html, body {
     text-align: center;
 }
 
+.clear {
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
 .message {
     color: #066b9e;
     font-size: 18px;
@@ -51,6 +57,7 @@ html, body {
     background-color: #353535;
     border-radius: 5px;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .options {
