@@ -160,7 +160,10 @@ const solve = (exp, values) => {
 
     const len = exp.length
 
-    if ( len === 1 ) {
+	if ( len === 0 ) {
+    	throw new SyntaxError('Empty expression')
+	}
+    else if ( len === 1 ) {
         if ( exp instanceof Array ) {
 	        return solve(exp[0], values)
         }
