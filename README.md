@@ -6,3 +6,5 @@ Logical expression solver
 - [ ] Shareable url
 - [ ] Invert logic expression
 - [ ] Simplify expression
+- [ ] Responsive interface
+- [ ] Extract module/UI
