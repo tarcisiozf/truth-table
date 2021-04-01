@@ -8,3 +8,4 @@ Logical expression solver
 - [ ] Simplify expression
 - [ ] Responsive interface
 - [ ] Extract module/UI
+- [ ] Improved parsing (longer variables, AST...)
