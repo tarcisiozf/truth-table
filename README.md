@@ -2,7 +2,7 @@
 Logical expression solver
 
 ## TODO
-[] Compare expressions
-[] Shareable url
-[] Invert logic expression
-[] Simplify expression
+- [ ] Compare expressions
+- [ ] Shareable url
+- [ ] Invert logic expression
+- [ ] Simplify expression
